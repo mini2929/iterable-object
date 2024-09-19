@@ -9,4 +9,59 @@ section {
     justify-content: center;
     align-items: center;
     font-size: 50px;
+
+    h1 {
+        // 블록요소 안쪽의 인라인요소에는 따로 margin을 설정하지 않아도 좌우 여백이 생김
+        // 해결 방법 부모 블록요소에 가서 font-size:0설정
+        font-size: 0px;
+    }
+
+    span {
+        font-size: 50px;
+        display: inline-block;
+        transform: scale(3);
+        opacity: 0;
+        transition: all 0.5s;
+
+        &:nth-of-type(1) {
+            transition-delay: 0s;
+        }
+        &:nth-of-type(2) {
+            transition-delay: 0.1s;
+        }
+        &:nth-of-type(3) {
+            transition-delay: 0.2s;
+        }
+        &:nth-of-type(4) {
+            transition-delay: 0.3s;
+        }
+        &:nth-of-type(5) {
+            transition-delay: 0.4s;
+        }
+        &:nth-of-type(6) {
+            transition-delay: 0.5s;
+        }
+        &:nth-of-type(7) {
+            transition-delay: 0.6s;
+        }
+        &:nth-of-type(8) {
+            transition-delay: 0.7s;
+        }
+        &:nth-of-type(9) {
+            transition-delay: 0.8s;
+        }
+        &:nth-of-type(10) {
+            transition-delay: 0.9s;
+        }
+        }
+    
+    
+    &:hover {
+        h1 {
+        span {
+            transform: scale(1);
+            opacity: 1;
+        }
+        }
+    }
 }

@@ -25,5 +25,49 @@ section {
   align-items: center;
   font-size: 50px;
 }
+section h1 {
+  font-size: 0px;
+}
+section span {
+  font-size: 50px;
+  display: inline-block;
+  transform: scale(3);
+  opacity: 0;
+  transition: all 0.5s;
+}
+section span:nth-of-type(1) {
+  transition-delay: 0s;
+}
+section span:nth-of-type(2) {
+  transition-delay: 0.1s;
+}
+section span:nth-of-type(3) {
+  transition-delay: 0.2s;
+}
+section span:nth-of-type(4) {
+  transition-delay: 0.3s;
+}
+section span:nth-of-type(5) {
+  transition-delay: 0.4s;
+}
+section span:nth-of-type(6) {
+  transition-delay: 0.5s;
+}
+section span:nth-of-type(7) {
+  transition-delay: 0.6s;
+}
+section span:nth-of-type(8) {
+  transition-delay: 0.7s;
+}
+section span:nth-of-type(9) {
+  transition-delay: 0.8s;
+}
+section span:nth-of-type(10) {
+  transition-delay: 0.9s;
+}
+section:hover h1 span {
+  transform: scale(1);
+  opacity: 1;
+}
 
 /*# sourceMappingURL=style.css.map */
