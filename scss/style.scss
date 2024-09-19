@@ -10,6 +10,11 @@ section {
     align-items: center;
     font-size: 50px;
 
+
+    h2 {
+        font-size: 30px;
+    }
+
     h1 {
         // 블록요소 안쪽의 인라인요소에는 따로 margin을 설정하지 않아도 좌우 여백이 생김
         // 해결 방법 부모 블록요소에 가서 font-size:0설정
