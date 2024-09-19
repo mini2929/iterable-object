@@ -15,4 +15,15 @@ a {
   color: inherit;
 }
 
+section {
+  width: 800px;
+  height: 400px;
+  border: 1px soild #333;
+  margin: 100px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+}
+
 /*# sourceMappingURL=style.css.map */
