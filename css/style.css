@@ -90,7 +90,7 @@ section h1 span {
   opacity: 0;
   transition: all 0.5s;
 }
-section h1:hover {
+section:hover h1 span {
   transform: scale(1);
   opacity: 1;
 }
