@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0px;
   padding: 0px;
@@ -18,57 +19,78 @@ a {
 section {
   width: 800px;
   height: 400px;
-  border: 1px soild #333;
+  border: 1px solid #333;
   margin: 100px auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  /*
+      h2 {
+          font-size: 30px;
+      }
+
+      h1 {
+          // 블록요소 안쪽의 인라인요소에는 따로 margin을 설정하지 않아도 좌우 여백이 생김
+          // 해결 방법 부모 블록요소에 가서 font-size:0설정
+          font-size: 0px;
+      }
+
+      span {
+          font-size: 50px;
+          display: inline-block;
+          transform: scale(3);
+          opacity: 0;
+          transition: all 0.5s;
+
+          &:nth-of-type(1) {
+              transition-delay: 0s;
+          }
+          &:nth-of-type(2) {
+              transition-delay: 0.1s;
+          }
+          &:nth-of-type(3) {
+              transition-delay: 0.2s;
+          }
+          &:nth-of-type(4) {
+              transition-delay: 0.3s;
+          }
+          &:nth-of-type(5) {
+              transition-delay: 0.4s;
+          }
+          &:nth-of-type(6) {
+              transition-delay: 0.5s;
+          }
+          &:nth-of-type(7) {
+              transition-delay: 0.6s;
+          }
+          &:nth-of-type(8) {
+              transition-delay: 0.7s;
+          }
+          &:nth-of-type(9) {
+              transition-delay: 0.8s;
+          }
+          &:nth-of-type(10) {
+              transition-delay: 0.9s;
+          }
+          }
+
+
+      &:hover {
+          h1 {
+          span {
+              transform: scale(1);
+              opacity: 1;
+          }
+          }
+      }*/
+}
+section h1 span {
   font-size: 50px;
-}
-section h2 {
-  font-size: 30px;
-}
-section h1 {
-  font-size: 0px;
-}
-section span {
-  font-size: 50px;
-  display: inline-block;
   transform: scale(3);
   opacity: 0;
   transition: all 0.5s;
 }
-section span:nth-of-type(1) {
-  transition-delay: 0s;
-}
-section span:nth-of-type(2) {
-  transition-delay: 0.1s;
-}
-section span:nth-of-type(3) {
-  transition-delay: 0.2s;
-}
-section span:nth-of-type(4) {
-  transition-delay: 0.3s;
-}
-section span:nth-of-type(5) {
-  transition-delay: 0.4s;
-}
-section span:nth-of-type(6) {
-  transition-delay: 0.5s;
-}
-section span:nth-of-type(7) {
-  transition-delay: 0.6s;
-}
-section span:nth-of-type(8) {
-  transition-delay: 0.7s;
-}
-section span:nth-of-type(9) {
-  transition-delay: 0.8s;
-}
-section span:nth-of-type(10) {
-  transition-delay: 0.9s;
-}
-section:hover h1 span {
+section h1:hover {
   transform: scale(1);
   opacity: 1;
 }
