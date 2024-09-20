@@ -75,7 +75,7 @@ function splitText(selector, elementTag, intervalTime = 0) {
         
         -----------------------------------*/
         
-        
+/*        
 function splitText(elem, tag ="span", interval = 0) {
     const el = document.querySelector(elem);
     const el_text = el.innerText;
@@ -96,5 +96,30 @@ function splitText(elem, tag ="span", interval = 0) {
 }   
 
 splitText("h2", "span" , 0);
+*/
 
 
+// ***********************************************
+// splitText 라는 이름으로 함수 선언. 이 때 파라미터로 elem, tag, interval 연결. tag와 interval에 전달되는 인수값이 없을 때 span, 0값을 디폴트로 설정
+    function splitText(elem, tag = "span", interval=0) {
+        if(!elem) {
+            console.error;
+            return;
+        }
+    
+
+    const el = document.querySelector(elem);
+    const el_text = el.innerText;
+    el.style.fontSize ="0px"
+    let resultText ="";
+    let counter = 0;
+
+    for (let letter of el_text) {
+        resultText += `<${tag} style='display:inline-block; transition-delay:${interval}s'>${letter}</${tag}>`;
+    }
+
+    el.innerHTML = resultText;
+
+    }
+
+    splitText("h1","span",0.05);
