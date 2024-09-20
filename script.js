@@ -76,24 +76,25 @@ function splitText(selector, elementTag, intervalTime = 0) {
         -----------------------------------*/
         
         
-function splitText(elem, tag) {
+function splitText(elem, tag ="span", interval = 0) {
     const el = document.querySelector(elem);
     const el_text = el.innerText;
+
     // 아래와 같이 DOM.style.fontsize='0px'은
     // 실제 html 태그상에 <h1 style = 'font-size:0px'></h1>와 같이 인라인 스타일 형태로 적용
     el.style.fontSize = "0px";
     
     // for of 반복문 안쪽에서 += 복합대입연산자로 태그 문자열이 들어있는 문자값이 계속 쌓일 변수 초기값 설정
     let resultText = "";
+    let counter = 0;
 
     for (let letter of el_text) {
         // console.log(letter);
-        resultText += `<${tag} style='display:inline-blck'>${letter}<${tag}`;
+        resultText += `<${tag} style='display:inline-block; transition-delay:${interval * counter++}s'>${letter}<${tag}`;
     }
-
     el.innerHTML = resultText;
 }   
 
-splitText("h2", "span");
+splitText("h2", "span" , 0);
 
 
